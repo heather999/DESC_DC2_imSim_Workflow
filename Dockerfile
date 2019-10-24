@@ -1,4 +1,4 @@
-FROM lsstdesc/stack-sims:w_2019_42-sims_w_2019_42-v1
+FROM lsstdesc/stack-sims:w_2019_42-sims_w_2019_42-v2
 
 USER root
 RUN mkdir -p /DC2 &&\
