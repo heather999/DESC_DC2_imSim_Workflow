@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     name: Build on Ubuntu
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: Docker login
         run: echo '${{ secrets.DOCKERHUB_ACCESSTOK }}' | docker login --username heather999 --password-stdin
