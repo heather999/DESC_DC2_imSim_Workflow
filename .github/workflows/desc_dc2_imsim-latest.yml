@@ -7,6 +7,8 @@ jobs:
     name: Build on Ubuntu
     runs-on: ubuntu-latest
     steps:
+      - name: Check Disk Space
+        run: df -h && rm -Rf /swapfile && apt-get clean && df -h 
       - name: Docker login
         run: echo '${{ secrets.DOCKERHUB_ACCESSTOK }}' | docker login --username heather999 --password-stdin
       - name: checkout desc_dc2_imsim_workflow 
